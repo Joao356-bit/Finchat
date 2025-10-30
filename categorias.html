@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finchat - Minhas Categorias</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="layout-with-sidebar">
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <h1 class="logo">Finchat</h1>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="arrow-left-right"></i> Transações</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="categorias.html"><i data-lucide="clipboard-list"></i> Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metas.html"><i data-lucide="target"></i> Metas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="bar-chart-3"></i> Relatórios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="settings"></i> Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user-profile">
+            <img src="https://i.pravatar.cc/40" alt="Avatar do Usuário" class="user-avatar">
+            <div class="user-details">
+                <span class="user-name">Usuário</span>
+                <span class="user-email">usuario@email.com</span>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="main-header">
+            <div>
+                <h2 class="main-title">Minhas Categorias</h2>
+                <p class="main-subtitle">Organize seus gastos para entender seus hábitos.</p>
+            </div>
+            <button class="btn btn-primary" id="btn-nova-categoria">
+                <i data-lucide="plus"></i> Adicionar Nova Categoria
+            </button>
+        </header>
+        <nav class="filters-nav">
+            <button class="filter-btn active">Este Mês</button>
+            <button class="filter-btn">Este Ano</button>
+            <button class="filter-btn">Período Customizado</button>
+        </nav>
+        <div class="categorias-grid">
+            <div class="card chart-card-categorias">
+                <h4 class="chart-title">Gastos por Categoria</h4>
+                <div class="chart-mock">
+                    <div class="chart-placeholder donut large">
+                        <div class="donut-total">
+                            <span>Total Gasto</span>
+                            <strong>R$4.850</strong>
+                        </div>
+                    </div>
+                </div>
+                <ul class="chart-legend-list">
+                    <li><span class="dot" style="background-color: #A050E2;"></span> Moradia <span class="percent">40%</span></li>
+                    <li><span class="dot" style="background-color: #E29450;"></span> Alimentação <span class="percent">25%</span></li>
+                    <li><span class="dot" style="background-color: #C650E2;"></span> Transporte <span class="percent">20%</span></li>
+                    <li><span class="dot" style="background-color: #E2D150;"></span> Lazer <span class="percent">10%</span></li>
+                    <li><span class="dot" style="background-color: #E0E0E0;"></span> Outros <span class="percent">5%</span></li>
+                </ul>
+            </div>
+            <div class="card list-card-categorias">
+                <div class="category-item">
+                    <div class="item-icon-wrapper" style="background-color: #E0F2E9; color: #178751;">
+                        <i data-lucide="home"></i>
+                    </div>
+                    <div class="item-details-main">
+                        <span class="item-name">Moradia</span>
+                        <span class="item-value">R$ 1.940,00</span>
+                    </div>
+                    <div class="item-progress-wrapper">
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" style="width: 40%; background-color: #178751;"></div>
+                        </div>
+                        <span class="item-percent">40%</span>
+                    </div>
+                    <button class="btn-options"><i data-lucide="more-vertical"></i></button>
+                </div>
+                <div class="category-item">
+                    <div class="item-icon-wrapper" style="background-color: #FCEFE6; color: #E29450;">
+                        <i data-lucide="utensils"></i>
+                    </div>
+                    <div class="item-details-main">
+                        <span class="item-name">Alimentação</span>
+                        <span class="item-value">R$ 1.212,50</span>
+                    </div>
+                    <div class="item-progress-wrapper">
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" style="width: 25%; background-color: #E29450;"></div>
+                        </div>
+                        <span class="item-percent">25%</span>
+                    </div>
+                    <button class="btn-options"><i data-lucide="more-vertical"></i></button>
+                </div>
+                <div class="category-item">
+                    <div class="item-icon-wrapper" style="background-color: #F4EAFB; color: #A050E2;">
+                        <i data-lucide="bus"></i>
+                    </div>
+                    <div class="item-details-main">
+                        <span class="item-name">Transporte</span>
+                        <span class="item-value">R$ 970,00</span>
+                    </div>
+                    <div class="item-progress-wrapper">
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" style="width: 20%; background-color: #A050E2;"></div>
+                        </div>
+                        <span class="item-percent">20%</span>
+                    </div>
+                    <button class="btn-options"><i data-lucide="more-vertical"></i></button>
+                </div>
+                <div class="category-item">
+                    <div class="item-icon-wrapper" style="background-color: #FFF9E0; color: #E2D150;">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <div class="item-details-main">
+                        <span class="item-name">Lazer</span>
+                        <span class="item-value">R$ 485,00</span>
+                    </div>
+                    <div class="item-progress-wrapper">
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" style="width: 10%; background-color: #E2D150;"></div>
+                        </div>
+                        <span class="item-percent">10%</span>
+                    </div>
+                    <button class="btn-options"><i data-lucide="more-vertical"></i></button>
+                </div>
+                <div class="category-item">
+                    <div class="item-icon-wrapper" style="background-color: #FDEEEE; color: #D94040;">
+                        <i data-lucide="heart-pulse"></i>
+                    </div>
+                    <div class="item-details-main">
+                        <span class="item-name">Saúde</span>
+                        <span class="item-value">R$ 242,50</span>
+                    </div>
+                    <div class="item-progress-wrapper">
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" style="width: 5%; background-color: #D94040;"></div>
+                        </div>
+                        <span class="item-percent">5%</span>
+                    </div>
+                    <button class="btn-options"><i data-lucide="more-vertical"></i></button>
+                </div>
+            </div>
+        </div> </main>
+    <div class="modal-overlay" id="modal-nova-categoria">
+        <div class="modal-card modal-card-sm">
+            <h3 class="modal-title">Nova Categoria</h3>
+            <p class="modal-subtitle">Crie uma nova categoria para organizar seus gastos.</p>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="categoria-nome">Nome da Categoria</label>
+                    <input type="text" id="categoria-nome" placeholder="Ex: Educação">
+                </div>
+                <div class="form-group">
+                    <label>Ícone</label>
+                    <div class="form-icon-list">
+                        <input type="radio" name="categoria-icone" id="icon-1" value="grad-cap" checked>
+                        <label class="icon-option" for="icon-1">
+                            <i data-lucide="graduation-cap"></i>
+                        </label>
+                        <input type="radio" name="categoria-icone" id="icon-2" value="shopping-basket">
+                        <label class="icon-option" for="icon-2">
+                            <i data-lucide="shopping-basket"></i>
+                        </label>
+                        <input type="radio" name="categoria-icone" id="icon-3" value="wine">
+                        <label class="icon-option" for="icon-3">
+                            <i data-lucide="wine"></i>
+                        </label>
+                        <input type="radio" name="categoria-icone" id="icon-4" value="dog">
+                        <label class="icon-option" for="icon-4">
+                            <i data-lucide="dog"></i>
+                        </label>
+                        <input type="radio" name="categoria-icone" id="icon-5" value="plane">
+                        <label class="icon-option" for="icon-5">
+                            <i data-lucide="plane"></i>
+                        </label>
+                        <input type="radio" name="categoria-icone" id="icon-6" value="more-horizontal">
+                        <label class="icon-option" for="icon-6">
+                            <i data-lucide="more-horizontal"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Cor</label>
+                    <div class="form-color-list">
+                        <input type="radio" name="categoria-cor" id="color-1" value="#34D399">
+                        <label class="color-option" for="color-1" style="background-color: #34D399;"></label>
+                        <input type="radio" name="categoria-cor" id="color-2" value="#A050E2">
+                        <label class="color-option" for="color-2" style="background-color: #A050E2;"></label>
+                        <input type="radio" name="categoria-cor" id="color-3" value="#C650E2">
+                        <label class="color-option" for="color-3" style="background-color: #C650E2;"></label>
+                        <input type="radio" name="categoria-cor" id="color-4" value="#E29450">
+                        <label class="color-option" for="color-4" style="background-color: #E29450;"></label>
+                        <input type="radio" name="categoria-cor" id="color-5" value="#F87171">
+                        <label class="color-option" for="color-5" style="background-color: #F87171;"></label>
+                        <input type="radio" name="categoria-cor" id="color-6" value="#007BFF" checked>
+                        <label class="color-option" for="color-6" style="background-color: #007BFF;"></label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="categoria-cancel-btn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Criar Categoria</button>
+                </div>
+            </form>
+        </div> 
+    </div> 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="categorias.js" defer></script>
+</body>
+</html>

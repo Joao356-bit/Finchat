@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finchat - Minhas Metas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <div>
+        <button onclick="location.href='index.html'" type="button" class="btn btn-back back-button-container"><i data-lucide="chevron-left" class="icon"></i></button>
+    </div>
+    <div class="main-container-metas">
+        <header class="metas-header">
+            <div class="header-content">
+                <h2 class="main-title">Suas Metas Financeiras</h2>
+                <p class="main-subtitle">Defina seus objetivos e acompanhe sua jornada.</p>
+            </div>
+            <button class="btn btn-primary" id="btn-nova-meta">
+                <i data-lucide="plus"></i> Nova Meta
+            </button>
+        </header>
+        <nav class="tabs-nav">
+            <ul>
+                <li class="tab-item active"><a href="#">Ativas</a></li>
+                <li class="tab-item"><a href="#">Concluídas</a></li>
+            </ul>
+        </nav>
+        <section class="goals-grid">
+            <div class="goal-card">
+                <img src="viagem_de_barco.jpg" alt="Viagem de barco" class="goal-image">
+                <div class="goal-content">
+                    <h3 class="goal-title">Viagem para a Europa</h3>
+                    <p class="goal-details">Economizado R$ 1.500 / Total R$ 10.000</p>
+                    <p class="goal-deadline">Meta até: 31/12/2024</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 15%;"></div>
+                    </div>
+                    <span class="goal-percentage">15%</span>
+                </div>
+                <button class="goal-menu"><i data-lucide="more-horizontal"></i></button>
+            </div>
+            <div class="goal-card">
+                <img src="interior_de_apartamento.jpg" alt="Interior de apartamento" class="goal-image">
+                <div class="goal-content">
+                    <h3 class="goal-title">Entrada do Apartamento</h3>
+                    <p class="goal-details">Economizado R$ 5.000 / Total R$ 20.000</p>
+                    <p class="goal-deadline">Meta até: 30/05/2025</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 25%;"></div>
+                    </div>
+                    <span class="goal-percentage">25%</span>
+                </div>
+                <button class="goal-menu"><i data-lucide="more-horizontal"></i></button>
+            </div>
+            <div class="goal-card">
+                <img src="carro_novo.jpg" alt="Carro antigo amarelo" class="goal-image">
+                <div class="goal-content">
+                    <h3 class="goal-title">Carro Novo</h3>
+                    <p class="goal-details">Economizado R$ 12.000 / Total R$ 15.000</p>
+                    <p class="goal-deadline">Meta até: 31/10/2024</p> 
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 80%;"></div>
+                    </div>
+                    <span class="goal-percentage">80%</span>
+                </div>
+                <button class="goal-menu"><i data-lucide="more-horizontal"></i></button>
+            </div>
+        </section>
+    </div> <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-btn">
+                <i data-lucide="x"></i>
+            </button>
+            <h3 class="modal-title">Criar Nova Meta</h3>
+            <form class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="meta-nome">Nome da Meta</label>
+                        <input type="text" id="meta-nome" placeholder="Ex: Viagem para a praia">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta-valor">Valor Total</label>
+                        <input type="text" id="meta-valor" placeholder="R$ 1.000,00">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="meta-prazo">Prazo Final</label>
+                        <input type="date" id="meta-prazo" placeholder="mm/dd/yyyy">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="meta-imagem">Imagem (Opcional)</label>
+                    <div class="form-upload-box">
+                        <i data-lucide="upload-cloud"></i>
+                        <p>Clique para enviar ou arraste e solte</p>
+                        <span>SVG, PNG, JPG ou GIF (MAX 800x400px)</span>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Meta</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="metas.js" defer></script>
+</body>
+</html>
+
+

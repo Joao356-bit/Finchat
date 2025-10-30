@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finchat - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="layout-with-sidebar">
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <h1 class="logo">Finchat</h1>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="index.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="arrow-left-right"></i> Transações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categorias.html"><i data-lucide="clipboard-list"></i> Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metas.html"><i data-lucide="target"></i> Metas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="bar-chart-3"></i> Relatórios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="settings"></i> Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user-profile">
+            <img src="avatar_do_usuario.jpg" alt="Avatar do Usuário" class="user-avatar">
+            <div class="user-details">
+                <span class="user-name">Pedro Almeida</span>
+                <span class="user-email">pedrinhoanjo01@gmail.com</span>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="main-header">
+            <div>
+                <h2 class="main-title">Dashboard Financeiro</h2>
+                <p class="main-subtitle">Aqui está um resumo de sua atividade financeira.</p>
+            </div>
+            <button class="btn btn-primary">
+                <i data-lucide="plus"></i> Adicionar Transação
+            </button>
+        </header>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <span class="card-title">Saldo Atual</span>
+                <div class="card-value-wrapper">
+                    <h3 class="card-value">R$ 15.230,50</h3>
+                </div>
+            </div>
+            <div class="summary-card">
+                <span class="card-title">Receita Total do Mês</span>
+                <div class="card-value-wrapper">
+                    <h3 class="card-value">R$ 8.500,00</h3>
+                    <span class="card-badge positive">+5.2%</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <span class="card-title">Despesa Total do Mês</span>
+                <div class="card-value-wrapper">
+                    <h3 class="card-value">R$ 4.350,00</h3>
+                    <span class="card-badge negative">+8.1%</span>
+                </div>
+            </div>
+        </div> 
+        <div class="details-grid">
+            <div class="card chart-card distribution-chart">
+                <h4 class="chart-title">Distribuição de Despesas</h4>
+                <div class="chart-mock">
+                    <div id="Donut">
+                    <div class="chart-placeholder donut">
+                        <svg width="200" height="200" viewBox="0 0 120 120">
+                            <circle class="base" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="0" />
+                            <circle class="seg1" cx="60" cy="60" r="50" />
+                            <circle class="seg2" cx="60" cy="60" r="50" />
+                            <circle class="seg3" cx="60" cy="60" r="50" />
+                            <circle class="seg4" cx="60" cy="60" r="50" />
+                            <g class="donut-center" transform="rotate(90 60 60)">
+                                <text x="60" y="55" text-anchor="middle" class="donut-label">Total</text>
+                                <text x="60" y="70" text-anchor="middle" class="donut-value">R$ 4.350,00</text>
+                            </g>
+                        </svg>
+                    </div>
+                    </div>
+                    <div class="chart-legend">
+                        <span style="color: #C084FC;">Moradia</span>
+                        <span style="color: #FB923C;">Alimentação</span>
+                        <span style="color: #06B6D4;">Transporte</span>
+                        <span style="color: #FACC15;">Lazer</span>
+                        <span style="color: #959494;">Outros</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card chart-card revenue-expense-chart">
+                <h4 class="chart-title">Receitas vs. Despesas</h4>
+                <div class="chart-mock-bar">
+                    <div class="chart-placeholder bar">
+                        <p>Gráfico de Barras</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card transactions-card">
+                <h4 class="card-title-list">Transações Recentes</h4>
+                <ul class="transaction-list">
+                    <li class="transaction-item expense">
+                        <div class="item-icon-wrapper red">
+                            <i data-lucide="shopping-cart" class="icon-default"></i>
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Supermercado</span>
+                            <span class="item-date">20 de Junho</span>
+                        </div>
+                        <span class="item-amount expense">- R$ 250,75</span>
+                    </li>
+                    <li class="transaction-item income">
+                        <div class="item-icon-wrapper green">
+                            <i data-lucide="wallet" class="icon-default"></i>
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Salário</span>
+                            <span class="item-date">15 de Junho</span>
+                        </div>
+                        <span class="item-amount income">+ R$ 5.500,00</span>
+                    </li>
+                    <li class="transaction-item expense">
+                        <div class="item-icon-wrapper red">
+                            <i data-lucide="utensils" class="icon-default"></i>
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Restaurante</span>
+                            <span class="item-date">18 de Junho</span>
+                        </div>
+                        <span class="item-amount expense">- R$ 85,90</span>
+                    </li>
+                    <li class="transaction-item expense">
+                        <div class="item-icon-wrapper red">
+                            <i data-lucide="fuel" class="icon-default"></i>
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Gasolina</span>
+                            <span class="item-date">17 de Junho</span>
+                        </div>
+                        <span class="item-amount expense">- R$ 150,00</span>
+                    </li>
+                    <li class="transaction-item income">
+                        <div class="item-icon-wrapper green">
+                            <i data-lucide="shopping-bag" class="icon-default"></i>
+                        </div>
+                        <div class="item-details">
+                            <span class="item-name">Venda Online</span>
+                            <span class="item-date">16 de Junho</span>
+                        </div>
+                        <span class="item-amount income">+ R$ 300,00</span>
+                    </li>
+                </ul>
+                <a href="#" class="view-all">Ver todas</a>
+            </div>
+        </div> 
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+</body>
+</html>
