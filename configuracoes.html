@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finchat - Configurações</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="layout-with-sidebar">
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <h1 class="logo">Finchat</h1>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="arrow-left-right"></i> Transações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categorias.html"><i data-lucide="clipboard-list"></i> Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metas.html"><i data-lucide="target"></i> Metas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i data-lucide="bar-chart-3"></i> Relatórios</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="configuracoes.html"><i data-lucide="settings"></i> Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user-profile">
+            <img src="avatar_do_usuario.jpg" alt="Avatar do Usuário" class="user-avatar">
+            <div class="user-details">
+                <span class="user-name">Pedro Almeida</span>
+                <span class="user-email">pedrinhoanjo01@gmail.com</span>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <header class="main-header">
+            <div>
+                <h2 class="main-title">Configurações da Conta</h2>
+                <p class="main-subtitle">Gerencie suas informações pessoais e integrações.</p>
+            </div>
+        </header>
+        <div class="config-card">
+            <h3 class="config-title">Informações do Usuário</h3>
+            <form class="config-form">
+                <div class="form-group">
+                    <label for="config-nome">Nome</label>
+                    <input type="text" id="config-nome" placeholder="Seu nome aqui">
+                </div>
+                <div class="form-group">
+                    <label for="config-email">E-mail</label>
+                    <input type="email" id="config-email" placeholder="exemplo@email.com">
+                </div>
+                <button type="submit" class="btn btn-primary config-save-btn">
+                    <i data-lucide="save"></i> Salvar Alterações
+                </button>
+            </form>
+            <h3 class="config-title" style="margin-top: 40px;">Integrações</h3>
+            <div class="telegram-box">
+                <p class="telegram-desc">
+                    Conecte sua conta do Telegram para receber alertas, mensagens do assistente e avisos automáticos.
+                </p>
+                <button class="btn btn-primary telegram-btn">
+                    <i data-lucide="send"></i> Alterar Chat do Telegram
+                </button>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+    <script src="configuracoes.js" defer></script>
+</body>
+</html>
